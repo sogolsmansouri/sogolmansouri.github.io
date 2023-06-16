@@ -120,10 +120,10 @@
     "id" : "49",
     "type" : "owl:Class"
   }, {
-    "id" : "24",
+    "id" : "58",
     "type" : "owl:Class"
   }, {
-    "id" : "58",
+    "id" : "24",
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
@@ -133,13 +133,6 @@
     "label" : {
       "IRI-based" : "Create"
     },
-    "individuals" : [ {
-      "iri" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#create1",
-      "baseIri" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO",
-      "labels" : {
-        "IRI-based" : "create1"
-      }
-    } ],
     "id" : "6",
     "superClasses" : [ "2", "7" ]
   }, {
@@ -172,13 +165,6 @@
     "label" : {
       "IRI-based" : "Buy"
     },
-    "individuals" : [ {
-      "iri" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#buy1",
-      "baseIri" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO",
-      "labels" : {
-        "IRI-based" : "buy1"
-      }
-    } ],
     "id" : "16",
     "superClasses" : [ "32", "14" ]
   }, {
@@ -341,19 +327,6 @@
     "label" : {
       "IRI-based" : "Advertise"
     },
-    "individuals" : [ {
-      "iri" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#adv2",
-      "baseIri" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO",
-      "labels" : {
-        "IRI-based" : "adv2"
-      }
-    }, {
-      "iri" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#adv1",
-      "baseIri" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO",
-      "labels" : {
-        "IRI-based" : "adv1"
-      }
-    } ],
     "id" : "1",
     "superClasses" : [ "2", "7" ]
   }, {
@@ -473,15 +446,6 @@
     "id" : "49",
     "superClasses" : [ "50" ]
   }, {
-    "iri" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Transfer",
-    "baseIri" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Transfer"
-    },
-    "id" : "24",
-    "superClasses" : [ "14", "7" ]
-  }, {
     "iri" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#PromiseTxn",
     "baseIri" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO",
     "instances" : 0,
@@ -491,6 +455,15 @@
     "subClasses" : [ "34" ],
     "id" : "58",
     "superClasses" : [ "28" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Transfer",
+    "baseIri" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Transfer"
+    },
+    "id" : "24",
+    "superClasses" : [ "14", "7" ]
   } ],
   "property" : [ {
     "id" : "0",
@@ -1044,21 +1017,21 @@
     "attributes" : [ "object", "anonymous" ],
     "id" : "90"
   }, {
-    "iri" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasInput",
-    "baseIri" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO",
-    "range" : "4",
-    "label" : {
-      "IRI-based" : "hasInput"
-    },
-    "domain" : "28",
-    "attributes" : [ "object", "someValues" ],
-    "id" : "91"
-  }, {
     "iri" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasOutput",
     "baseIri" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO",
     "range" : "5",
     "label" : {
       "IRI-based" : "hasOutput"
+    },
+    "domain" : "28",
+    "attributes" : [ "object", "someValues" ],
+    "id" : "91"
+  }, {
+    "iri" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasInput",
+    "baseIri" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "hasInput"
     },
     "domain" : "28",
     "attributes" : [ "object", "someValues" ],
