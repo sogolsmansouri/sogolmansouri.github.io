@@ -1,0 +1,2476 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>An Ontology for Modeling Transactional Behavior in Decentralized Marketplaces </title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://www.semanticweb.org/sogol/ontologies/2023/3/DMO","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://www.semanticweb.org/sogol/ontologies/2023/3/DMO","name":"An Ontology for Modeling Transactional Behavior in Decentralized Marketplaces ", "headline":"Blockchains are distributed ledger platforms that were originally envisioned for implementing digital assets and cryptocurrencies", "datePublished":"Fri Jun 16 12:21:47 EDT 2023", "version":"v1.0", "license":"https://creativecommons.org/publicdomain/zero/1.0/", "author":[{"@type":"Person","name":"Sogolsadat Mansouri"},{"@type":"Person","name":"Vodelina Samatova"},{"@type":"Person","name":"Nodirbek Korchiev"},{"@type":"Person","name":"Kemafor Anyanwu"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>An Ontology for Modeling Transactional Behavior in Decentralized Marketplaces </h1>
+
+
+<dl>
+<dt>This version:</dt>
+<dd><a href="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO">http://www.semanticweb.org/sogol/ontologies/2023/3/DMO</a></dd>
+<dt>Latest version:</dt>
+<dd><a href="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO">http://www.semanticweb.org/sogol/ontologies/2023/3/DMO</a></dd>
+<dt>Revision:</dt>
+<dd>v1.0</dd>
+<dt>Authors:</dt>
+<dd>Sogolsadat Mansouri</dd><dd>Vodelina Samatova</dd><dd>Nodirbek Korchiev</dd><dd>Kemafor Anyanwu</dd>
+
+<dt>Publisher:</dt>
+<dd><a href="null">null</a>, (<a href="null">null</a>)</dd>
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank"><img src="https://img.shields.io/badge/License-Creative%20Commons%20Zero%20v1.0%20Universal-blue.svg" alt="https://creativecommons.org/publicdomain/zero/1.0/" /></a>
+</dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd><dt>Cite as:</dt>
+<dd>Retrieved from: http://www.semanticweb.org/sogol/ontologies/2023/3/DMO</dd>
+</dl>
+
+<a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+Blockchains are distributed ledger platforms that were originally envisioned for implementing digital assets and cryptocurrencies</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</span>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">DeMaTO: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:extra="https://w3id.org/extra#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#AcceptBid"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#AcceptBid">
+         <span>accept bid</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Advertise"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Advertise">
+         <span>advertise</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Bid"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Bid">
+         <span>bid</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Buy"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Buy">
+         <span>buy</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Create"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Create">
+         <span>create</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Destroy"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Destroy">
+         <span>destroy</span>
+      </a>
+   </li>
+   <li>
+      <a href="#FungibleAsset"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#FungibleAsset">
+         <span>fungible asset</span>
+      </a>
+   </li>
+   <li>
+      <a href="#MKTxn"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#MKTxn">
+         <span>m k txn</span>
+      </a>
+   </li>
+   <li>
+      <a href="#NestedTxn"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#NestedTxn">
+         <span>nested txn</span>
+      </a>
+   </li>
+   <li>
+      <a href="#NonFungibleAsset"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#NonFungibleAsset">
+         <span>non fungible asset</span>
+      </a>
+   </li>
+   <li>
+      <a href="#NonTransferringTxn"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#NonTransferringTxn">
+         <span>non transferring txn</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Offer"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Offer">
+         <span>offer</span>
+      </a>
+   </li>
+   <li>
+      <a href="#PromiseTxn"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#PromiseTxn">
+         <span>promise txn</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Refund"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Refund">
+         <span>refund</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Request"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Request">
+         <span>request</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Return"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Return">
+         <span>return</span>
+      </a>
+   </li>
+   <li>
+      <a href="#SimpleTxn"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#SimpleTxn">
+         <span>simple txn</span>
+      </a>
+   </li>
+   <li>
+      <a href="#SysAccount"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#SysAccount">
+         <span>sys account</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Transfer"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Transfer">
+         <span>transfer</span>
+      </a>
+   </li>
+   <li>
+      <a href="#TransferringTxn"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TransferringTxn">
+         <span>transferring txn</span>
+      </a>
+   </li>
+   <li>
+      <a href="#TxnInput"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnInput">
+         <span>txn input</span>
+      </a>
+   </li>
+   <li>
+      <a href="#TxnOuput"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnOuput">
+         <span>txn ouput</span>
+      </a>
+   </li>
+   <li>
+      <a href="#UserAccount"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#UserAccount">
+         <span>user account</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Withdraw"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Withdraw">
+         <span>withdraw</span>
+      </a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:extra="https://w3id.org/extra#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#childTxn"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#childTxn">
+         <span>child txn</span>
+      </a>
+   </li>
+   <li>
+      <a href="#distributes"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#distributes">
+         <span>distributes</span>
+      </a>
+   </li>
+   <li>
+      <a href="#hasAsset"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasAsset">
+         <span>has asset</span>
+      </a>
+   </li>
+   <li>
+      <a href="#hasInput"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasInput">
+         <span>has input</span>
+      </a>
+   </li>
+   <li>
+      <a href="#hasOutput"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasOutput">
+         <span>has output</span>
+      </a>
+   </li>
+   <li>
+      <a href="#hasSig"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasSig">
+         <span>has sig</span>
+      </a>
+   </li>
+   <li>
+      <a href="#hasSysAcc"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasSysAcc">
+         <span>has sys acc</span>
+      </a>
+   </li>
+   <li>
+      <a href="#msgTxn"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#msgTxn">
+         <span>msg txn</span>
+      </a>
+   </li>
+   <li>
+      <a href="#outputCond"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#outputCond">
+         <span>output cond</span>
+      </a>
+   </li>
+   <li>
+      <a href="#receiver"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#receiver">
+         <span>receiver</span>
+      </a>
+   </li>
+   <li>
+      <a href="#refTxn"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#refTxn">
+         <span>ref txn</span>
+      </a>
+   </li>
+   <li>
+      <a href="#sender"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sender">
+         <span>sender</span>
+      </a>
+   </li>
+   <li>
+      <a href="#sigCond"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sigCond">
+         <span>sig cond</span>
+      </a>
+   </li>
+   <li>
+      <a href="#sigGeneratedBy"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sigGeneratedBy">
+         <span>sig generated by</span>
+      </a>
+   </li>
+   <li>
+      <a href="#spends"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#spends">
+         <span>spends</span>
+      </a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:extra="https://w3id.org/extra#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#assetId"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#assetId">
+         <span>asset id</span>
+      </a>
+   </li>
+   <li>
+      <a href="#numShare"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#numShare">
+         <span>num share</span>
+      </a>
+   </li>
+   <li>
+      <a href="#opName"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#opName">
+         <span>op name</span>
+      </a>
+   </li>
+   <li>
+      <a href="#privateKey"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#privateKey">
+         <span>private key</span>
+      </a>
+   </li>
+   <li>
+      <a href="#publicKey"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#publicKey">
+         <span>public key</span>
+      </a>
+   </li>
+   <li>
+      <a href="#sigHash"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sigHash">
+         <span>sig hash</span>
+      </a>
+   </li>
+   <li>
+      <a href="#txnId"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#txnId">
+         <span>txn id</span>
+      </a>
+   </li>
+   <li>
+      <a href="#txnInputId"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#txnInputId">
+         <span>txn input id</span>
+      </a>
+   </li>
+   <li>
+      <a href="#txnOutputId"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#txnOutputId">
+         <span>txn output id</span>
+      </a>
+   </li>
+</ul><h4>Annotation Properties</h4><ul xmlns:extra="https://w3id.org/extra#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"
+         title="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled">
+         <span>is rule enabled</span>
+      </a>
+   </li>
+</ul><h4>Named Individuals</h4><ul xmlns:extra="https://w3id.org/extra#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#advOut2"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#advOut2">
+         <span>adv out2</span>
+      </a>
+   </li>
+   <li>
+      <a href="#adv1"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#adv1">
+         <span>adv1</span>
+      </a>
+   </li>
+   <li>
+      <a href="#adv2"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#adv2">
+         <span>adv2</span>
+      </a>
+   </li>
+   <li>
+      <a href="#buyOut2"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#buyOut2">
+         <span>buy out2</span>
+      </a>
+   </li>
+   <li>
+      <a href="#buy1"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#buy1">
+         <span>buy1</span>
+      </a>
+   </li>
+   <li>
+      <a href="#createIn"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#createIn">
+         <span>create in</span>
+      </a>
+   </li>
+   <li>
+      <a href="#createOut"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#createOut">
+         <span>create out</span>
+      </a>
+   </li>
+   <li>
+      <a href="#create1"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#create1">
+         <span>create1</span>
+      </a>
+   </li>
+   <li>
+      <a href="#sig1"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sig1">
+         <span>sig1</span>
+      </a>
+   </li>
+   <li>
+      <a href="#sig2"
+         title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sig2">
+         <span>sig2</span>
+      </a>
+   </li>
+</ul><iframe align="center" width="100%" height ="500px" src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">DeMaTO: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a placeholder text for the description of your ontology. The description should include an explanation and a diagram explaining how the classes are related, examples of usage, etc.</span>
+
+<img src="https://github.com/sogolsmansouri/Demato-Ontology/blob/main/DeMaTO_class_hierarchy.png"></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for DeMaTO classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by DeMaTO.
+<div xmlns:extra="https://w3id.org/extra#"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#AcceptBid"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#AcceptBid">
+            <span>accept bid</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Advertise"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Advertise">
+            <span>advertise</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Bid"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Bid">
+            <span>bid</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Buy"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Buy">
+            <span>buy</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Create"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Create">
+            <span>create</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Destroy"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Destroy">
+            <span>destroy</span>
+         </a>
+      </li>
+      <li>
+         <a href="#FungibleAsset"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#FungibleAsset">
+            <span>fungible asset</span>
+         </a>
+      </li>
+      <li>
+         <a href="#MKTxn"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#MKTxn">
+            <span>m k txn</span>
+         </a>
+      </li>
+      <li>
+         <a href="#NestedTxn"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#NestedTxn">
+            <span>nested txn</span>
+         </a>
+      </li>
+      <li>
+         <a href="#NonFungibleAsset"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#NonFungibleAsset">
+            <span>non fungible asset</span>
+         </a>
+      </li>
+      <li>
+         <a href="#NonTransferringTxn"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#NonTransferringTxn">
+            <span>non transferring txn</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Offer"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Offer">
+            <span>offer</span>
+         </a>
+      </li>
+      <li>
+         <a href="#PromiseTxn"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#PromiseTxn">
+            <span>promise txn</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Refund"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Refund">
+            <span>refund</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Request"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Request">
+            <span>request</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Return"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Return">
+            <span>return</span>
+         </a>
+      </li>
+      <li>
+         <a href="#SimpleTxn"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#SimpleTxn">
+            <span>simple txn</span>
+         </a>
+      </li>
+      <li>
+         <a href="#SysAccount"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#SysAccount">
+            <span>sys account</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Transfer"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Transfer">
+            <span>transfer</span>
+         </a>
+      </li>
+      <li>
+         <a href="#TransferringTxn"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TransferringTxn">
+            <span>transferring txn</span>
+         </a>
+      </li>
+      <li>
+         <a href="#TxnInput"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnInput">
+            <span>txn input</span>
+         </a>
+      </li>
+      <li>
+         <a href="#TxnOuput"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnOuput">
+            <span>txn ouput</span>
+         </a>
+      </li>
+      <li>
+         <a href="#UserAccount"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#UserAccount">
+            <span>user account</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Withdraw"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Withdraw">
+            <span>withdraw</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="AcceptBid">
+      <h3>accept bid<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#AcceptBid</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#NestedTxn"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#NestedTxn">nested txn</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#TransferringTxn"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TransferringTxn">transferring txn</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Advertise">
+      <h3>advertise<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Advertise</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#NonTransferringTxn"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#NonTransferringTxn">non transferring txn</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#SimpleTxn"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#SimpleTxn">simple txn</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#adv1"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#adv1">adv1</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#adv2"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#adv2">adv2</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Bid">
+      <h3>bid<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Bid</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#PromiseTxn"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#PromiseTxn">promise txn</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#SimpleTxn"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#SimpleTxn">simple txn</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Buy">
+      <h3>buy<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Buy</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#NestedTxn"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#NestedTxn">nested txn</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#TransferringTxn"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TransferringTxn">transferring txn</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#buy1"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#buy1">buy1</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Create">
+      <h3>create<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Create</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#NonTransferringTxn"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#NonTransferringTxn">non transferring txn</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#SimpleTxn"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#SimpleTxn">simple txn</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#create1"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#create1">create1</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Destroy">
+      <h3>destroy<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Destroy</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#NonTransferringTxn"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#NonTransferringTxn">non transferring txn</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#SimpleTxn"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#SimpleTxn">simple txn</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="FungibleAsset">
+      <h3>fungible asset<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#FungibleAsset</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Asset"
+               target="_blank"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Asset">asset</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="MKTxn">
+      <h3>m k txn<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#MKTxn</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#NestedTxn"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#NestedTxn">nested txn</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#NonTransferringTxn"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#NonTransferringTxn">non transferring txn</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#PromiseTxn"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#PromiseTxn">promise txn</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#SimpleTxn"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#SimpleTxn">simple txn</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#TransferringTxn"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TransferringTxn">transferring txn</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasAsset"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasAsset">has asset</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasInput"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasInput">has input</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasOutput"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasOutput">has output</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#msgTxn"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#msgTxn">msg txn</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#opName"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#opName">op name</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#refTxn"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#refTxn">ref txn</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#txnId"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#txnId">txn id</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#childTxn"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#childTxn">child txn</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#refTxn"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#refTxn">ref txn</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="NestedTxn">
+      <h3>nested txn<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#NestedTxn</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#MKTxn"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#MKTxn">m k txn</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#AcceptBid"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#AcceptBid">accept bid</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Buy"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Buy">buy</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Refund"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Refund">refund</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#childTxn"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#childTxn">child txn</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="NonFungibleAsset">
+      <h3>non fungible asset<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#NonFungibleAsset</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Asset"
+               target="_blank"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Asset">asset</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="NonTransferringTxn">
+      <h3>non transferring txn<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#NonTransferringTxn</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#MKTxn"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#MKTxn">m k txn</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Advertise"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Advertise">advertise</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Create"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Create">create</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Destroy"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Destroy">destroy</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Offer"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Offer">offer</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Request"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Request">request</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Offer">
+      <h3>offer<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Offer</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#NonTransferringTxn"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#NonTransferringTxn">non transferring txn</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#SimpleTxn"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#SimpleTxn">simple txn</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PromiseTxn">
+      <h3>promise txn<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#PromiseTxn</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#MKTxn"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#MKTxn">m k txn</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Bid"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Bid">bid</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasSysAcc"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasSysAcc">has sys acc</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Refund">
+      <h3>refund<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Refund</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#NestedTxn"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#NestedTxn">nested txn</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#TransferringTxn"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TransferringTxn">transferring txn</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Request">
+      <h3>request<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Request</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#NonTransferringTxn"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#NonTransferringTxn">non transferring txn</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#SimpleTxn"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#SimpleTxn">simple txn</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Return">
+      <h3>return<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Return</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#SimpleTxn"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#SimpleTxn">simple txn</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#TransferringTxn"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TransferringTxn">transferring txn</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SimpleTxn">
+      <h3>simple txn<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#SimpleTxn</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#MKTxn"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#MKTxn">m k txn</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Advertise"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Advertise">advertise</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Bid"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Bid">bid</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Create"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Create">create</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Destroy"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Destroy">destroy</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Offer"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Offer">offer</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Request"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Request">request</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Return"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Return">return</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Transfer"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Transfer">transfer</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Withdraw"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Withdraw">withdraw</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SysAccount">
+      <h3>sys account<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#SysAccount</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Account"
+               target="_blank"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Account">account</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasSysAcc"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasSysAcc">has sys acc</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Transfer">
+      <h3>transfer<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Transfer</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#SimpleTxn"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#SimpleTxn">simple txn</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#TransferringTxn"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TransferringTxn">transferring txn</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="TransferringTxn">
+      <h3>transferring txn<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TransferringTxn</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#MKTxn"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#MKTxn">m k txn</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#AcceptBid"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#AcceptBid">accept bid</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Buy"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Buy">buy</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Refund"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Refund">refund</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Return"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Return">return</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Transfer"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Transfer">transfer</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Withdraw"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Withdraw">withdraw</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="TxnInput">
+      <h3>txn input<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnInput</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasSig"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasSig">has sig</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#sender"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sender">sender</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#spends"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#spends">spends</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#txnInputId"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#txnInputId">txn input id</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasInput"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasInput">has input</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="TxnOuput">
+      <h3>txn ouput<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnOuput</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#distributes"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#distributes">distributes</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#numShare"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#numShare">num share</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#outputCond"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#outputCond">output cond</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#receiver"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#receiver">receiver</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#txnOutputId"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#txnOutputId">txn output id</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasOutput"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasOutput">has output</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#spends"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#spends">spends</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="UserAccount">
+      <h3>user account<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#UserAccount</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Account"
+               target="_blank"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Account">account</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Withdraw">
+      <h3>withdraw<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Withdraw</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#SimpleTxn"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#SimpleTxn">simple txn</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#TransferringTxn"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TransferringTxn">transferring txn</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div xmlns:extra="https://w3id.org/extra#"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#childTxn"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#childTxn">
+            <span>child txn</span>
+         </a>
+      </li>
+      <li>
+         <a href="#distributes"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#distributes">
+            <span>distributes</span>
+         </a>
+      </li>
+      <li>
+         <a href="#hasAsset"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasAsset">
+            <span>has asset</span>
+         </a>
+      </li>
+      <li>
+         <a href="#hasInput"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasInput">
+            <span>has input</span>
+         </a>
+      </li>
+      <li>
+         <a href="#hasOutput"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasOutput">
+            <span>has output</span>
+         </a>
+      </li>
+      <li>
+         <a href="#hasSig"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasSig">
+            <span>has sig</span>
+         </a>
+      </li>
+      <li>
+         <a href="#hasSysAcc"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasSysAcc">
+            <span>has sys acc</span>
+         </a>
+      </li>
+      <li>
+         <a href="#msgTxn"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#msgTxn">
+            <span>msg txn</span>
+         </a>
+      </li>
+      <li>
+         <a href="#outputCond"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#outputCond">
+            <span>output cond</span>
+         </a>
+      </li>
+      <li>
+         <a href="#receiver"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#receiver">
+            <span>receiver</span>
+         </a>
+      </li>
+      <li>
+         <a href="#refTxn"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#refTxn">
+            <span>ref txn</span>
+         </a>
+      </li>
+      <li>
+         <a href="#sender"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sender">
+            <span>sender</span>
+         </a>
+      </li>
+      <li>
+         <a href="#sigCond"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sigCond">
+            <span>sig cond</span>
+         </a>
+      </li>
+      <li>
+         <a href="#sigGeneratedBy"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sigGeneratedBy">
+            <span>sig generated by</span>
+         </a>
+      </li>
+      <li>
+         <a href="#spends"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#spends">
+            <span>spends</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="childTxn">
+      <h3>child txn<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#childTxn</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#NestedTxn"
+                  title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#NestedTxn">nested txn</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#MKTxn"
+                  title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#MKTxn">m k txn</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="distributes">
+      <h3>distributes<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#distributes</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#TxnOuput"
+                  title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnOuput">txn ouput</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Asset"
+                  target="_blank"
+                  title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Asset">asset</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasAsset">
+      <h3>has asset<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasAsset</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#MKTxn"
+                  title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#MKTxn">m k txn</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Asset"
+                  target="_blank"
+                  title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Asset">asset</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasInput">
+      <h3>has input<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasInput</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#MKTxn"
+                  title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#MKTxn">m k txn</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#TxnInput"
+                  title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnInput">txn input</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasOutput">
+      <h3>has output<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasOutput</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#MKTxn"
+                  title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#MKTxn">m k txn</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#TxnOuput"
+                  title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnOuput">txn ouput</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasSig">
+      <h3>has sig<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasSig</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#TxnInput"
+                  title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnInput">txn input</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Signature"
+                  target="_blank"
+                  title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Signature">signature</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasSysAcc">
+      <h3>has sys acc<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasSysAcc</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#PromiseTxn"
+                  title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#PromiseTxn">promise txn</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SysAccount"
+                  title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#SysAccount">sys account</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="msgTxn">
+      <h3>msg txn<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#msgTxn</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#MKTxn"
+                  title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#MKTxn">m k txn</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Signature"
+                  target="_blank"
+                  title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Signature">signature</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="outputCond">
+      <h3>output cond<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#outputCond</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#TxnOuput"
+                  title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnOuput">txn ouput</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Condition"
+                  target="_blank"
+                  title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Condition">condition</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="receiver">
+      <h3>receiver<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#receiver</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#TxnOuput"
+                  title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnOuput">txn ouput</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Account"
+                  target="_blank"
+                  title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Account">account</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="refTxn">
+      <h3>ref txn<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#refTxn</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#MKTxn"
+                  title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#MKTxn">m k txn</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#MKTxn"
+                  title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#MKTxn">m k txn</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="sender">
+      <h3>sender<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sender</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#TxnInput"
+                  title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnInput">txn input</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Account"
+                  target="_blank"
+                  title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Account">account</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="sigCond">
+      <h3>sig cond<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sigCond</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Signature"
+                  target="_blank"
+                  title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Signature">signature</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Condition"
+                  target="_blank"
+                  title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Condition">condition</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="sigGeneratedBy">
+      <h3>sig generated by<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sigGeneratedBy</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Signature"
+                  target="_blank"
+                  title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Signature">signature</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Account"
+                  target="_blank"
+                  title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Account">account</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="spends">
+      <h3>spends<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#spends</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#TxnInput"
+                  title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnInput">txn input</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#TxnOuput"
+                  title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnOuput">txn ouput</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div xmlns:extra="https://w3id.org/extra#"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#assetId"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#assetId">
+            <span>asset id</span>
+         </a>
+      </li>
+      <li>
+         <a href="#numShare"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#numShare">
+            <span>num share</span>
+         </a>
+      </li>
+      <li>
+         <a href="#opName"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#opName">
+            <span>op name</span>
+         </a>
+      </li>
+      <li>
+         <a href="#privateKey"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#privateKey">
+            <span>private key</span>
+         </a>
+      </li>
+      <li>
+         <a href="#publicKey"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#publicKey">
+            <span>public key</span>
+         </a>
+      </li>
+      <li>
+         <a href="#sigHash"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sigHash">
+            <span>sig hash</span>
+         </a>
+      </li>
+      <li>
+         <a href="#txnId"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#txnId">
+            <span>txn id</span>
+         </a>
+      </li>
+      <li>
+         <a href="#txnInputId"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#txnInputId">
+            <span>txn input id</span>
+         </a>
+      </li>
+      <li>
+         <a href="#txnOutputId"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#txnOutputId">
+            <span>txn output id</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="assetId">
+      <h3>asset id<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#assetId</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://www.w3.org/2002/07/owl#topDataProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</a>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Asset"
+                  target="_blank"
+                  title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Asset">asset</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#int"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#int">int</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="numShare">
+      <h3>num share<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#numShare</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#TxnOuput"
+                  title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnOuput">txn ouput</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">non negative integer</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="opName">
+      <h3>op name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#opName</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#MKTxn"
+                  title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#MKTxn">m k txn</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="privateKey">
+      <h3>private key<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#privateKey</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Account"
+                  target="_blank"
+                  title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Account">account</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="publicKey">
+      <h3>public key<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#publicKey</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Account"
+                  target="_blank"
+                  title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Account">account</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="sigHash">
+      <h3>sig hash<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sigHash</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Signature"
+                  target="_blank"
+                  title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Signature">signature</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="txnId">
+      <h3>txn id<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#txnId</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://www.w3.org/2002/07/owl#topDataProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</a>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#MKTxn"
+                  title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#MKTxn">m k txn</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#int"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#int">int</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="txnInputId">
+      <h3>txn input id<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#txnInputId</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#TxnInput"
+                  title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnInput">txn input</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#int"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#int">int</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="txnOutputId">
+      <h3>txn output id<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#txnOutputId</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#TxnOuput"
+                  title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnOuput">txn ouput</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#int"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#int">int</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div xmlns:extra="https://w3id.org/extra#"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="annotationproperties">
+   <h3 id="annotationproperties" class="list">Annotation Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"
+            title="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled">
+            <span>is rule enabled</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled">
+      <h3>is rule enabled<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled</p>
+   </div>
+</div><div xmlns:extra="https://w3id.org/extra#"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="namedindividuals">
+   <h3 id="namedindividuals" class="list">Named Individuals</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#advOut2"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#advOut2">
+            <span>adv out2</span>
+         </a>
+      </li>
+      <li>
+         <a href="#adv1"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#adv1">
+            <span>adv1</span>
+         </a>
+      </li>
+      <li>
+         <a href="#adv2"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#adv2">
+            <span>adv2</span>
+         </a>
+      </li>
+      <li>
+         <a href="#buyOut2"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#buyOut2">
+            <span>buy out2</span>
+         </a>
+      </li>
+      <li>
+         <a href="#buy1"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#buy1">
+            <span>buy1</span>
+         </a>
+      </li>
+      <li>
+         <a href="#createIn"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#createIn">
+            <span>create in</span>
+         </a>
+      </li>
+      <li>
+         <a href="#createOut"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#createOut">
+            <span>create out</span>
+         </a>
+      </li>
+      <li>
+         <a href="#create1"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#create1">
+            <span>create1</span>
+         </a>
+      </li>
+      <li>
+         <a href="#sig1"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sig1">
+            <span>sig1</span>
+         </a>
+      </li>
+      <li>
+         <a href="#sig2"
+            title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sig2">
+            <span>sig2</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="advOut2">
+      <h3>adv out2<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#advOut2</p>
+      <dl class="description">
+         <dt>has facts</dt>
+         <dd>
+            <a href="#numShare"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#numShare">num share</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"0"^^<a href="http://www.w3.org/2001/XMLSchema#integer"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="adv1">
+      <h3>adv1<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#adv1</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Advertise"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Advertise">advertise</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#hasAsset"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasAsset">has asset</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#advAsset1"
+               target="_blank"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#advAsset1">adv asset1</a>
+         </dd>
+         <dd>
+            <a href="#hasOutput"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasOutput">has output</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#createOut"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#createOut">create out</a>
+         </dd>
+         <dd>
+            <a href="#refTxn"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#refTxn">ref txn</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#create1"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#create1">create1</a>
+         </dd>
+         <dd>
+            <a href="#opName"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#opName">op name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">""advertise""</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="adv2">
+      <h3>adv2<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#adv2</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Advertise"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Advertise">advertise</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#hasAsset"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasAsset">has asset</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#advAsset2"
+               target="_blank"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#advAsset2">adv asset2</a>
+         </dd>
+         <dd>
+            <a href="#hasInput"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasInput">has input</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#advIn2"
+               target="_blank"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#advIn2">adv in2</a>
+         </dd>
+         <dd>
+            <a href="#hasOutput"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasOutput">has output</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#advOut2"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#advOut2">adv out2</a>
+         </dd>
+         <dd>
+            <a href="#opName"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#opName">op name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">""advertise""</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="buyOut2">
+      <h3>buy out2<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#buyOut2</p>
+      <dl class="description">
+         <dt>has facts</dt>
+         <dd>
+            <a href="#hasAsset"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasAsset">has asset</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#buyAsset1"
+               target="_blank"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#buyAsset1">buy asset1</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="buy1">
+      <h3>buy1<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#buy1</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Buy"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Buy">buy</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#hasInput"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasInput">has input</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#buyIn1"
+               target="_blank"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#buyIn1">buy in1</a>
+         </dd>
+         <dd>
+            <a href="#hasInput"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasInput">has input</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#buyIn2"
+               target="_blank"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#buyIn2">buy in2</a>
+         </dd>
+         <dd>
+            <a href="#hasOutput"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasOutput">has output</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#buyOut1"
+               target="_blank"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#buyOut1">buy out1</a>
+         </dd>
+         <dd>
+            <a href="#hasOutput"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasOutput">has output</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#buyOut2"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#buyOut2">buy out2</a>
+         </dd>
+         <dd>
+            <a href="#refTxn"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#refTxn">ref txn</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#adv1"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#adv1">adv1</a>
+         </dd>
+         <dd>
+            <a href="#opName"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#opName">op name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">""buy""</span>
+         </dd>
+         <dd>
+            <a href="#txnId"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#txnId">txn id</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"1"^^<a href="http://www.w3.org/2001/XMLSchema#integer"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="createIn">
+      <h3>create in<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#createIn</p>
+      <dl class="description">
+         <dt>has facts</dt>
+         <dd>
+            <a href="#hasSig"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasSig">has sig</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#sig1"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sig1">sig1</a>
+         </dd>
+         <dd>
+            <a href="#sender"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sender">sender</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#acc1"
+               target="_blank"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#acc1">acc1</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="createOut">
+      <h3>create out<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#createOut</p>
+      <dl class="description">
+         <dt>has facts</dt>
+         <dd>
+            <a href="#distributes"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#distributes">distributes</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#asset1"
+               target="_blank"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#asset1">asset1</a>
+         </dd>
+         <dd>
+            <a href="#receiver"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#receiver">receiver</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#acc1"
+               target="_blank"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#acc1">acc1</a>
+         </dd>
+         <dd>
+            <a href="#numShare"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#numShare">num share</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"0"^^<a href="http://www.w3.org/2001/XMLSchema#integer"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="create1">
+      <h3>create1<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#create1</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Create"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Create">create</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#hasAsset"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasAsset">has asset</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#assetNull"
+               target="_blank"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#assetNull">asset null</a>
+         </dd>
+         <dd>
+            <a href="#hasInput"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasInput">has input</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#createIn"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#createIn">create in</a>
+         </dd>
+         <dd>
+            <a href="#hasOutput"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasOutput">has output</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#createOut"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#createOut">create out</a>
+         </dd>
+         <dd>
+            <a href="#msgTxn"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#msgTxn">msg txn</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#sig2"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sig2">sig2</a>
+         </dd>
+         <dd>
+            <a href="#opName"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#opName">op name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">""create""</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="sig1">
+      <h3>sig1<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sig1</p>
+      <dl class="description">
+         <dt>has facts</dt>
+         <dd>
+            <a href="#sigGeneratedBy"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sigGeneratedBy">sig generated by</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#acc1"
+               target="_blank"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#acc1">acc1</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="sig2">
+      <h3>sig2<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sig2</p>
+      <dl class="description">
+         <dt>has facts</dt>
+         <dd>
+            <a href="#sigGeneratedBy"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sigGeneratedBy">sig generated by</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#acc1"
+               target="_blank"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#acc1">acc1</a>
+         </dd>
+      </dl>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Add your references here. It is recommended to have them as a list.</span>
+
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

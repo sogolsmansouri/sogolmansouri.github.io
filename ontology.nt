@@ -1,0 +1,484 @@
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO> <http://www.w3.org/2002/07/owl#versionIRI> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#childTxn
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#childTxn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#childTxn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#NestedTxn> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#childTxn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#MKTxn> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#distributes
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#distributes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#distributes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnOuput> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#distributes> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Asset> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasAsset
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasAsset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasAsset> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#MKTxn> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasAsset> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Asset> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasInput
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasInput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasInput> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#MKTxn> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasInput> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnInput> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasOutput
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasOutput> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#MKTxn> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasOutput> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnOuput> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasSig
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasSig> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasSig> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasSig> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnInput> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasSig> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Signature> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasSysAcc
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasSysAcc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasSysAcc> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#PromiseTxn> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasSysAcc> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#SysAccount> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#msgTxn
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#msgTxn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#msgTxn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#msgTxn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#MKTxn> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#msgTxn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Signature> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#outputCond
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#outputCond> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#outputCond> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnOuput> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#outputCond> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Condition> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#receiver
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#receiver> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#receiver> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnOuput> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#receiver> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Account> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#refTxn
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#refTxn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#refTxn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#MKTxn> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#refTxn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#MKTxn> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sender
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sender> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnInput> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sender> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Account> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sigCond
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sigCond> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sigCond> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Signature> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sigCond> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Condition> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sigGeneratedBy
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sigGeneratedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sigGeneratedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sigGeneratedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Signature> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sigGeneratedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Account> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#spends
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#spends> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#spends> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnInput> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#spends> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnOuput> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#assetId
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#assetId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#assetId> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#assetId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#assetId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Asset> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#assetId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#numShare
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#numShare> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#numShare> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnOuput> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#numShare> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#opName
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#opName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#opName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#MKTxn> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#opName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#privateKey
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#privateKey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#privateKey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#privateKey> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Account> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#privateKey> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#publicKey
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#publicKey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#publicKey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#publicKey> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Account> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#publicKey> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sigHash
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sigHash> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sigHash> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sigHash> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Signature> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sigHash> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#txnId
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#txnId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#txnId> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#txnId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#txnId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#MKTxn> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#txnId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#txnInputId
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#txnInputId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#txnInputId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#txnInputId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnInput> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#txnInputId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#txnOutputId
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#txnOutputId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#txnOutputId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#txnOutputId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnOuput> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#txnOutputId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#AcceptBid
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#AcceptBid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#AcceptBid> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#NestedTxn> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#AcceptBid> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TransferringTxn> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Account
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Account> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Advertise
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Advertise> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Advertise> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#NonTransferringTxn> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Advertise> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#SimpleTxn> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Advertise> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Create> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#refTxn> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Asset
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Asset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Bid
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Bid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Bid> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#PromiseTxn> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Bid> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#SimpleTxn> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Buy
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Buy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Buy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#NestedTxn> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Buy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TransferringTxn> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Buy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Advertise> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#refTxn> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Buy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnInput> .
+_:genid3 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "2"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasInput> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Buy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnOuput> .
+_:genid4 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "2"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasOutput> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Condition
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Condition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Create
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Create> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Create> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#NonTransferringTxn> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Create> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#SimpleTxn> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Create> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnInput> .
+_:genid5 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasInput> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Destroy
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Destroy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Destroy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#NonTransferringTxn> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Destroy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#SimpleTxn> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#FungibleAsset
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#FungibleAsset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#FungibleAsset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Asset> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#MKTxn
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#MKTxn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#MKTxn> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Asset> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasAsset> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#MKTxn> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnInput> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasInput> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#MKTxn> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnOuput> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasOutput> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#NestedTxn
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#NestedTxn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#NestedTxn> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#MKTxn> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#NonFungibleAsset
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#NonFungibleAsset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#NonFungibleAsset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Asset> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#NonTransferringTxn
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#NonTransferringTxn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#NonTransferringTxn> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#MKTxn> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Offer
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Offer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Offer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#NonTransferringTxn> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Offer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#SimpleTxn> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#PromiseTxn
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#PromiseTxn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#PromiseTxn> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#MKTxn> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Refund
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Refund> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Refund> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#NestedTxn> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Refund> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TransferringTxn> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Request
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Request> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Request> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#NonTransferringTxn> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Request> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#SimpleTxn> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Return
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Return> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Return> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#SimpleTxn> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Return> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TransferringTxn> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Signature
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Signature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#SimpleTxn
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#SimpleTxn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#SimpleTxn> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#MKTxn> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#SysAccount
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#SysAccount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#SysAccount> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Account> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Transfer
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Transfer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Transfer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#SimpleTxn> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Transfer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TransferringTxn> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TransferringTxn
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TransferringTxn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TransferringTxn> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#MKTxn> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TransferringTxn> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnOuput> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasOutput> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnInput
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnInput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnInput> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Account> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sender> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnInput> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+_:genid11 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Signature> .
+_:genid11 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasSig> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnOuput
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnOuput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnOuput> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
+_:genid12 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Account> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#receiver> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnOuput> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
+_:genid13 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid13 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#opName> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnWorkflow
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnWorkflow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#UserAccount
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#UserAccount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#UserAccount> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Account> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Withdraw
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Withdraw> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Withdraw> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#SimpleTxn> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Withdraw> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TransferringTxn> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#acc1
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#acc1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#adv1
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#adv1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#adv1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Advertise> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#adv1> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasAsset> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#advAsset1> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#adv1> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasOutput> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#createOut> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#adv1> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#refTxn> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#create1> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#adv1> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#opName> "\"advertise\"" .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#adv2
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#adv2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#adv2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Advertise> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#adv2> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasAsset> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#advAsset2> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#adv2> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasInput> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#advIn2> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#adv2> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasOutput> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#advOut2> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#adv2> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#opName> "\"advertise\"" .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#advAsset1
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#advAsset1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#advAsset2
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#advAsset2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#advIn2
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#advIn2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#advOut2
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#advOut2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#advOut2> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#numShare> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#asset1
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#asset1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#assetNull
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#assetNull> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#buy1
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#buy1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#buy1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Buy> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#buy1> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasInput> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#buyIn1> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#buy1> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasInput> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#buyIn2> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#buy1> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasOutput> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#buyOut1> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#buy1> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasOutput> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#buyOut2> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#buy1> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#refTxn> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#adv1> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#buy1> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#opName> "\"buy\"" .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#buy1> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#txnId> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#buyAsset1
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#buyAsset1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#buyIn1
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#buyIn1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#buyIn2
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#buyIn2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#buyOut1
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#buyOut1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#buyOut2
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#buyOut2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#buyOut2> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasAsset> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#buyAsset1> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#create1
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#create1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#create1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Create> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#create1> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasAsset> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#assetNull> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#create1> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasInput> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#createIn> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#create1> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasOutput> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#createOut> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#create1> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#msgTxn> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sig2> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#create1> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#opName> "\"create\"" .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#createIn
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#createIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#createIn> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasSig> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sig1> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#createIn> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sender> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#acc1> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#createOut
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#createOut> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#createOut> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#distributes> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#asset1> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#createOut> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#receiver> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#acc1> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#createOut> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#numShare> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sig1
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sig1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sig1> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sigGeneratedBy> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#acc1> .
+# 
+# http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sig2
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sig2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sig2> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sigGeneratedBy> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#acc1> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Rules
+# #
+# #################################################################
+# 
+# 
+<urn:swrl:var#z> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<urn:swrl:var#ox1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<urn:swrl:var#x> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+_:genid14 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid14 <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+_:genid14 <http://www.w3.org/2000/01/rdf-schema#label> "S1" .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid14 <http://www.w3.org/2003/11/swrl#body> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid16 .
+_:genid16 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#ox1> .
+_:genid16 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#z> .
+_:genid16 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasOutput> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid14 <http://www.w3.org/2003/11/swrl#head> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid18 .
+_:genid18 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#x> .
+_:genid18 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Buy> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

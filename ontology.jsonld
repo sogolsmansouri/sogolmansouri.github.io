@@ -1,0 +1,785 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#refTxn"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Create"
+  } ]
+}, {
+  "@id" : "_:genid10",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sender"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Account"
+  } ]
+}, {
+  "@id" : "_:genid11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Signature"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasSig"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid12",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#receiver"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Account"
+  } ]
+}, {
+  "@id" : "_:genid13",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#opName"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid14",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
+  "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : ""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "S1"
+  } ],
+  "http://www.w3.org/2003/11/swrl#body" : [ {
+    "@list" : [ {
+      "@id" : "_:genid16"
+    } ]
+  } ],
+  "http://www.w3.org/2003/11/swrl#head" : [ {
+    "@list" : [ {
+      "@id" : "_:genid18"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid16",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl:var#z"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@id" : "urn:swrl:var#ox1"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasOutput"
+  } ]
+}, {
+  "@id" : "_:genid18",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl:var#x"
+  } ],
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Buy"
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#refTxn"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Advertise"
+  } ]
+}, {
+  "@id" : "_:genid3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnInput"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasInput"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "2"
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnOuput"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasOutput"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "2"
+  } ]
+}, {
+  "@id" : "_:genid5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnInput"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasInput"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasAsset"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Asset"
+  } ]
+}, {
+  "@id" : "_:genid7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasInput"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnInput"
+  } ]
+}, {
+  "@id" : "_:genid8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasOutput"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnOuput"
+  } ]
+}, {
+  "@id" : "_:genid9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasOutput"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnOuput"
+  } ]
+}, {
+  "@id" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#AcceptBid",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#NestedTxn"
+  }, {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TransferringTxn"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Account",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Advertise",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#NonTransferringTxn"
+  }, {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#SimpleTxn"
+  }, {
+    "@id" : "_:genid1"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Asset",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Bid",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#PromiseTxn"
+  }, {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#SimpleTxn"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Buy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#NestedTxn"
+  }, {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TransferringTxn"
+  }, {
+    "@id" : "_:genid2"
+  }, {
+    "@id" : "_:genid3"
+  }, {
+    "@id" : "_:genid4"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Condition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Create",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#NonTransferringTxn"
+  }, {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#SimpleTxn"
+  }, {
+    "@id" : "_:genid5"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Destroy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#NonTransferringTxn"
+  }, {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#SimpleTxn"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#FungibleAsset",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Asset"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#MKTxn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid6"
+  }, {
+    "@id" : "_:genid7"
+  }, {
+    "@id" : "_:genid8"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#NestedTxn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#MKTxn"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#NonFungibleAsset",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Asset"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#NonTransferringTxn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#MKTxn"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Offer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#NonTransferringTxn"
+  }, {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#SimpleTxn"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#PromiseTxn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#MKTxn"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Refund",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#NestedTxn"
+  }, {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TransferringTxn"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Request",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#NonTransferringTxn"
+  }, {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#SimpleTxn"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Return",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#SimpleTxn"
+  }, {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TransferringTxn"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Signature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#SimpleTxn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#MKTxn"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#SysAccount",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Account"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Transfer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#SimpleTxn"
+  }, {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TransferringTxn"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TransferringTxn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#MKTxn"
+  }, {
+    "@id" : "_:genid9"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnInput",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid10"
+  }, {
+    "@id" : "_:genid11"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnOuput",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid12"
+  }, {
+    "@id" : "_:genid13"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnWorkflow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#UserAccount",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Account"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Withdraw",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#SimpleTxn"
+  }, {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TransferringTxn"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#acc1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#adv1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasAsset" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#advAsset1"
+  } ],
+  "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasOutput" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#createOut"
+  } ],
+  "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#opName" : [ {
+    "@value" : "\"advertise\""
+  } ],
+  "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#refTxn" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#create1"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Advertise"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#adv2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasAsset" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#advAsset2"
+  } ],
+  "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasInput" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#advIn2"
+  } ],
+  "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasOutput" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#advOut2"
+  } ],
+  "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#opName" : [ {
+    "@value" : "\"advertise\""
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Advertise"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#advAsset1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#advAsset2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#advIn2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#advOut2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#numShare" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "0"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#asset1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#assetId",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Asset"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#assetNull",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#buy1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasInput" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#buyIn1"
+  }, {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#buyIn2"
+  } ],
+  "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasOutput" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#buyOut1"
+  }, {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#buyOut2"
+  } ],
+  "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#opName" : [ {
+    "@value" : "\"buy\""
+  } ],
+  "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#refTxn" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#adv1"
+  } ],
+  "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#txnId" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Buy"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#buyAsset1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#buyIn1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#buyIn2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#buyOut1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#buyOut2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasAsset" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#buyAsset1"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#childTxn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#NestedTxn"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#MKTxn"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#create1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasAsset" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#assetNull"
+  } ],
+  "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasInput" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#createIn"
+  } ],
+  "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasOutput" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#createOut"
+  } ],
+  "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#msgTxn" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sig2"
+  } ],
+  "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#opName" : [ {
+    "@value" : "\"create\""
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Create"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#createIn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasSig" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sig1"
+  } ],
+  "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sender" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#acc1"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#createOut",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#distributes" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#asset1"
+  } ],
+  "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#numShare" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "0"
+  } ],
+  "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#receiver" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#acc1"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#distributes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnOuput"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Asset"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasAsset",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#MKTxn"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Asset"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasInput",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#MKTxn"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnInput"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasOutput",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#MKTxn"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnOuput"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasSig",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnInput"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Signature"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#hasSysAcc",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#PromiseTxn"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#SysAccount"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#msgTxn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#MKTxn"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Signature"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#numShare",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnOuput"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#opName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#MKTxn"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#outputCond",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnOuput"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Condition"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#privateKey",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Account"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#publicKey",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Account"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#receiver",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnOuput"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Account"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#refTxn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#MKTxn"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#MKTxn"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sender",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnInput"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Account"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sig1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sigGeneratedBy" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#acc1"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sig2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sigGeneratedBy" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#acc1"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sigCond",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Signature"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Condition"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sigGeneratedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Signature"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Account"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#sigHash",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Signature"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#spends",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnInput"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnOuput"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#txnId",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#MKTxn"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#txnInputId",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnInput"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#txnOutputId",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TxnOuput"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
+  } ]
+}, {
+  "@id" : "urn:swrl:var#ox1",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+}, {
+  "@id" : "urn:swrl:var#x",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+}, {
+  "@id" : "urn:swrl:var#z",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+} ]
