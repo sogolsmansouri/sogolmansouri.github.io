@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://www.semanticweb.org/sogol/ontologies/2023/3/DMO","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://www.semanticweb.org/sogol/ontologies/2023/3/DMO","name":"An Ontology for Modeling Transactional Behavior in Decentralized Marketplaces ", "headline":"Blockchains are distributed ledger platforms that were originally envisioned for implementing digital assets and cryptocurrencies", "datePublished":"Fri Jun 16 12:21:47 EDT 2023", "version":"v1.0", "license":"https://creativecommons.org/publicdomain/zero/1.0/", "author":[{"@type":"Person","name":"Sogolsadat Mansouri"},{"@type":"Person","name":"Vodelina Samatova"},{"@type":"Person","name":"Nodirbek Korchiev"},{"@type":"Person","name":"Kemafor Anyanwu"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://www.semanticweb.org/sogol/ontologies/2023/3/DMO","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://www.semanticweb.org/sogol/ontologies/2023/3/DMO","name":"An Ontology for Modeling Transactional Behavior in Decentralized Marketplaces ", "headline":"Blockchains are distributed ledger platforms that were originally envisioned for implementing digital assets and cryptocurrencies", "datePublished":"Fri Jun 16 14:47:32 EDT 2023", "version":"v1.0", "license":"https://creativecommons.org/publicdomain/zero/1.0/", "author":[{"@type":"Person","name":"Sogolsadat Mansouri"},{"@type":"Person","name":"Vodelina Samatova"},{"@type":"Person","name":"Nodirbek Korchiev"},{"@type":"Person","name":"Kemafor Anyanwu"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -476,7 +476,7 @@ This ontology has the following classes and properties.</span>
 <span class="markdown">
 This is a placeholder text for the description of your ontology. The description should include an explanation and a diagram explaining how the classes are related, examples of usage, etc.</span>
 
-<img src="https://github.com/sogolsmansouri/Demato-Ontology/blob/main/DeMaTO_class_hierarchy.png"></div>
+</div>
    
 
 <!--CROSSREF SECTION-->
@@ -859,6 +859,12 @@ This section provides details for each class and property defined by DeMaTO.
                title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#childTxn">child txn</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#SimpleTxn"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#SimpleTxn">simple txn</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
       </dl>
    </div>
    <div class="entity" id="NonFungibleAsset">
@@ -904,6 +910,12 @@ This section provides details for each class and property defined by DeMaTO.
                title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Offer">offer</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Request"
                title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Request">request</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#TransferringTxn"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#TransferringTxn">transferring txn</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1044,6 +1056,12 @@ This section provides details for each class and property defined by DeMaTO.
                title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Withdraw">withdraw</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#NestedTxn"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#NestedTxn">nested txn</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
       </dl>
    </div>
    <div class="entity" id="SysAccount">
@@ -1115,6 +1133,12 @@ This section provides details for each class and property defined by DeMaTO.
                title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Transfer">transfer</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Withdraw"
                title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#Withdraw">withdraw</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#NonTransferringTxn"
+               title="http://www.semanticweb.org/sogol/ontologies/2023/3/DMO#NonTransferringTxn">non transferring txn</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
